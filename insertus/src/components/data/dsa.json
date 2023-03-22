@@ -1,0 +1,13 @@
+[
+{"name":"Algorithms","link":"https://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm"},
+{"name":"Arrays","link":"https://www.tutorialspoint.com/data_structures_algorithms/array_data_structure.htm"},
+{"name":"Linked Lists","link":"https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm"},
+{"name":"Stacks","link":"https://www.tutorialspoint.com/data_structures_algorithms/stack_algorithm.htm"},
+{"name":"Queues","link":"https://www.tutorialspoint.com/data_structures_algorithms/dsa_queue.htm"},
+{"name":"Hash Tables","link":"https://www.tutorialspoint.com/data_structures_algorithms/hash_data_structure.htm"},
+{"name":"Sorting","link":"https://www.tutorialspoint.com/data_structures_algorithms/sorting_algorithms.htm"},
+{"name":"Searching Algorithms","link":"https://www.tutorialspoint.com/data_structures_algorithms/searching_algorithms.htm"},
+{"name":"Graphs","link":"https://www.tutorialspoint.com/data_structures_algorithms/graph_data_structure.htm"},
+{"name":"Trees","link":"https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm"},
+{"name":"Recursion","link":"https://www.tutorialspoint.com/data_structures_algorithms/recursion_basics.htm"}
+]

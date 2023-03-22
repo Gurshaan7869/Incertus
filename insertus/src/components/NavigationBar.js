@@ -9,9 +9,9 @@ function NavigationBar({ user }) {
   };
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className="dark navbar" variant="dark" expand="lg">
       <Navbar.Brand href="/">
-        <h3>Insertus</h3>
+        <h3>INCERTUS</h3>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

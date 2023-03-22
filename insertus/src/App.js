@@ -11,6 +11,12 @@ import Register from "./components/Register";
 import Contact from "./components/Contact";
 import PrevQuestions from "./components/PrevQuestions";
 import Learning from "./components/Learning";
+import Footer from "./components/Footer";
+import Aptitude from "./components/Learning/Aptitude";
+import CsSubjects from "./components/Learning/CsSubjects";
+import PopLang from "./components/Learning/PopLang";
+import PopSkills from "./components/Learning/PopSkills";
+import DataStructures from "./components/Learning/DataStructures";
 
 firebase.initializeApp({
   apiKey: "AIzaSyCvDmFRroQnsobcztxPpCFA8MZUz13d_ac",
@@ -36,12 +42,23 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/learning" element={<Learning />} />
+
+            <Route path="/learning/aptitude" element={<Aptitude />} />
+            <Route path="/learning/cssubjects" element={<CsSubjects />} />
+            <Route
+              path="/learning/datastructures"
+              element={<DataStructures />}
+            />
+            <Route path="/learning/popularlanguages" element={<PopLang />} />
+            <Route path="/learning/popularskills" element={<PopSkills />} />
+
             <Route path="/prevquestions" element={<PrevQuestions />} />
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/register" element={<Register setUser={setUser} />} />
           </Routes>
         </Container>
       </Router>
+      <Footer />
     </div>
   );
 }

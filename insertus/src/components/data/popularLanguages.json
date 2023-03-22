@@ -1,0 +1,6 @@
+[
+{"name":"C", "img":"c_logo.png","link":"https://www.w3schools.com/c/"},
+{"name":"C++", "img":"cpp_icon.png","link":"https://www.w3schools.com/cpp/"},
+{"name":"Java", "img":"java_icon.png","link":"https://www.w3schools.com/java/"},
+{"name":"Python", "img":"python_icon.png","link":"https://www.w3schools.com/python/"}
+]

@@ -24,35 +24,37 @@ function Login({ setUser }) {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <Form onSubmit={handleSubmit}>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Form.Group controlId="email">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-      <p>
-        Don't have an account? <Link to="/register">Register here</Link>
-      </p>
+    <div className="height-align">
+      <h1>Login</h1>
+      <div className="login-form-container">
+        <Form onSubmit={handleSubmit}>
+          {error && (
+            <Alert variant="danger">EMAIL OR PASSWORD IS INCORRECT</Alert>
+          )}
+          <Form.Group controlId="email">
+            <Form.Control
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group controlId="password">
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+        <p>
+          Don't have an account? <Link to="/register">Register here</Link>
+        </p>
+      </div>
     </div>
   );
 }

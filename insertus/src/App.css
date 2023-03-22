@@ -1,38 +1,240 @@
+html, body, #root {
+  background-color: black;
+  font-family: 'Mukta', sans-serif;
+}
 .App {
+  text-align: center;
+  background-color: black;
+  height: 100%;
+}
+
+.dark{
+background-color: black;
+}
+
+/* Styles for login form container */
+.height-align{
+  margin-top: 10%;
+  color: white;
+  padding-bottom: 5%;
+}
+
+.login-form-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for form input fields */
+.login-form-container input[type=email], 
+.login-form-container input[type=password] {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+/* Styles for login button */
+.login-form-container button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #1abc9c;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Style for login button when hovered */
+.login-form-container button:hover {
+  background-color: #16a085;
+}
+
+/* Styles for login form links */
+.login-form-container a {
+  color: dodgerblue;
+}
+
+/* Style for login form error message */
+.login-form-container .error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Company */
+/* Card container styles */
+.cardContainer{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin: 2%;
+}
+
+/* Title styles */
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Title margin and padding */
+.card-title {
+  margin-bottom: 10px;
+}
+
+.learningContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer{
+  margin-top: 5%;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px; /* adjust the height as needed */
+  background-color: black;
+  color: #fff;
+  padding: 5%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.comp{
+  margin-top: 5%;
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.technical{
+  color: #24c7d6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo{
+  margin-bottom: 5%;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.navbar{
+  margin: 0 2%;
+}
+
+.white{
+  color: white;
+}
+
+.red{
+  background-color: #f25b5c;
+}
+.blue{
+  background-color: #8c52fe;
+}
+.green{
+  background-color: #f8bd48;
+}
+.yellow{
+  background-color: #62d958;
+}
+.purple{
+  background-color: #06698a;
+}
+.margin{
+margin: 2%;
+}
+
+.learningCard{
+  color: white;
+  width: 400px;
+  height: auto;
+  padding: 10px;
+  position: relative;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.learningImage{
+  width: 200px;
+}
+
+.no-deco{
+  margin: 1%;
+  text-decoration: none;
+}
+
+.AptiCard{
+  margin: 1%;
+  text-decoration: none;
+}
+
+.dsaCard{
+  padding: 5%;
+}
+
+.cardHead{
+  height: 60px;
+}
+
+.homeCard{
+  width: 400px;
+  margin: 1%;
+  border-radius: 20px;
+  padding: 1%;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25%;
+}
+
+.homeIcons{
+  height: 200px;
+  margin-bottom: 10%;
+}
+
+.welcome {
+margin-top: 20%;
+  text-align: left;
+}
+
+.name{
+  margin-top: -2%;
+  color: #f8bd48;
+  text-align: left;
+  font-size: 100px;
+}
+
+.des{
+  margin-top: 5%;
+  text-align: left;
+  width: 800px;
+  color: #ccc;
 }

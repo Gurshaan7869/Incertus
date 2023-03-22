@@ -1,0 +1,8 @@
+[
+{"name":"Data Science","img":"datasci_icon.png","nanoDegree":"","link":"https://www.w3schools.com/datascience/"},
+{"name":"Machine Learning","img":"ml_icon.png","link":"https://www.w3schools.com/ai/default.asp"},
+{"name":"Cyber Security","img":"cyber_icon.png","link":"https://www.w3schools.com/cybersecurity/"},
+{"name":"Power BI","img":"powerbi_icon.png","link":""},
+{"name":"Cloud Computing","img":"cloud_icon.png","link":"https://www.w3schools.com/aws/aws_cloudessentials_cloudcomputing.php"},
+{"name":"Ethical Hacking","img":"eth_icon.png","link":"https://www.w3schools.com/cybersecurity/cybersecurity_crime.php"}
+]

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "./data1.json";
+import data from "./data/data1.json";
 
 const PrevQuestions = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -9,24 +9,36 @@ const PrevQuestions = () => {
   }
   return (
     <div>
-      {data.map((card, index) => (
-        <div key={index} onClick={() => handleClick(index)}>
-          <h2>{card.name}</h2>
-          {selectedCard === index && (
+      <div className="white margin">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+      <div className="cardContainer">
+        {data.map((card, index) => (
+          <div className="card" key={index} onClick={() => handleClick(index)}>
             <div>
-              <br />
-              <h5>Technical Round Questions</h5>
-              {card.tq1}
-              <br />
-              {card.tq2}
-              <br />
-              <br />
-              <h5>HR Round Questions</h5>
-              {card.hq1}
+              <img className="logo" src={card.logo} alt="" />
             </div>
-          )}
-        </div>
-      ))}
+            <h2>{card.name}</h2>
+            {selectedCard === index && (
+              <div className="comp">
+                <br />
+                <div className="technical">
+                  <h3>Technical Round Questions</h3>
+                </div>
+                <div className="techCard">{card.tq1}</div>
+                <br />
+                <div className="techCard">{card.tq2}</div>
+                <br />
+                <br />
+                <div className="technical">
+                  <h3>HR Round Questions</h3>
+                </div>
+                {card.hq1}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

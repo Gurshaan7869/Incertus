@@ -1,0 +1,7 @@
+[
+    {"name":"CS Subjects","img":"cs_icon.png"},
+    {"name":"Data Structures","img":"dsa_icon.png"},
+    {"name":"Aptitude","img":"apti_icon.png"},
+    {"name":"Popular Languages","img":"prog_icon.png"},
+    {"name":"Popular Skills","img":"skills_icon.png"}
+]
