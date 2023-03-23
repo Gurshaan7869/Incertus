@@ -23,7 +23,7 @@ function Predic() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:3000/api/form", {
+    fetch("https://placement-data-analysis.onrender.com/predict", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

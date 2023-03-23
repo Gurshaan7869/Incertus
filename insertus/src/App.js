@@ -17,6 +17,7 @@ import CsSubjects from "./components/Learning/CsSubjects";
 import PopLang from "./components/Learning/PopLang";
 import PopSkills from "./components/Learning/PopSkills";
 import DataStructures from "./components/Learning/DataStructures";
+import back from "./components/img/1.png";
 
 firebase.initializeApp({
   apiKey: "AIzaSyCvDmFRroQnsobcztxPpCFA8MZUz13d_ac",
@@ -37,26 +38,22 @@ function App() {
     <div className="App">
       <Router>
         <NavigationBar user={user} />
-        <Container className="mt-3">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/learning" element={<Learning />} />
 
-            <Route path="/learning/aptitude" element={<Aptitude />} />
-            <Route path="/learning/cssubjects" element={<CsSubjects />} />
-            <Route
-              path="/learning/datastructures"
-              element={<DataStructures />}
-            />
-            <Route path="/learning/popularlanguages" element={<PopLang />} />
-            <Route path="/learning/popularskills" element={<PopSkills />} />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/learning" element={<Learning />} />
 
-            <Route path="/prevquestions" element={<PrevQuestions />} />
-            <Route path="/login" element={<Login setUser={setUser} />} />
-            <Route path="/register" element={<Register setUser={setUser} />} />
-          </Routes>
-        </Container>
+          <Route path="/learning/aptitude" element={<Aptitude />} />
+          <Route path="/learning/cssubjects" element={<CsSubjects />} />
+          <Route path="/learning/datastructures" element={<DataStructures />} />
+          <Route path="/learning/popularlanguages" element={<PopLang />} />
+          <Route path="/learning/popularskills" element={<PopSkills />} />
+
+          <Route path="/prevquestions" element={<PrevQuestions />} />
+          <Route path="/login" element={<Login setUser={setUser} />} />
+          <Route path="/register" element={<Register setUser={setUser} />} />
+        </Routes>
       </Router>
       <Footer />
     </div>

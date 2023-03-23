@@ -56,7 +56,9 @@ function CsSubjects() {
   return (
     <div>
       <h1 className="white margin">CS Subjects</h1>
-      <CardList topics={topicsData} />
+      <div className="padding">
+        <CardList topics={topicsData} />
+      </div>
     </div>
   );
 }

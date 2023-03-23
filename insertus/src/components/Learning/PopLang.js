@@ -56,7 +56,9 @@ function PopLang() {
   return (
     <div>
       <h1 className="white margin">Popular Languages</h1>
-      <CardList topics={topicsData} />
+      <div className="padding">
+        <CardList topics={topicsData} />
+      </div>
     </div>
   );
 }

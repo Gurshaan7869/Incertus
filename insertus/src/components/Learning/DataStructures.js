@@ -52,7 +52,9 @@ function DataStructures() {
   return (
     <div>
       <h1 className="white margin">Data Structures</h1>
-      <CardList topics={topicsData} />
+      <div className="padding">
+        <CardList topics={topicsData} />
+      </div>
     </div>
   );
 }

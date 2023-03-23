@@ -1,10 +1,10 @@
 html, body, #root {
-  background-color: black;
+  background-color: #181d31;
   font-family: 'Mukta', sans-serif;
 }
 .App {
   text-align: center;
-  background-color: black;
+  background-color: #181d31;
   height: 100%;
 }
 
@@ -106,12 +106,11 @@ background-color: black;
 }
 
 .footer{
-  margin-top: 5%;
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 100px; /* adjust the height as needed */
-  background-color: black;
+  height: 100px;
+  background-color: #181d31;
   color: #fff;
   padding: 5%;
   text-align: center;
@@ -139,7 +138,8 @@ background-color: black;
 }
 
 .navbar{
-  margin: 0 2%;
+  margin: 0 2%; 
+  background-color: #181d31;
 }
 
 .white{
@@ -198,35 +198,33 @@ margin: 2%;
   padding: 5%;
 }
 
-.cardHead{
-  height: 60px;
-}
-
 .homeCard{
-  width: 400px;
-  margin: 1%;
+  width: 700px;
   border-radius: 20px;
   padding: 1%;
+  margin-left: 50%;
+  margin-top: 1%;
+  color: #181d31;
+  background-color: #b8a867;
 }
 
 .flex{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 25%;
+  display: flex; 
 }
 
 .homeIcons{
-  height: 200px;
-  margin-bottom: 10%;
+  margin: auto;
+  height: 80px;
 }
 
 .welcome {
-margin-top: 20%;
   text-align: left;
+  height: 100%;
+  padding-top: 20%;
 }
 
 .name{
-  margin-top: -2%;
+  margin-top: 0%;
   color: #f8bd48;
   text-align: left;
   font-size: 100px;
@@ -237,4 +235,48 @@ margin-top: 20%;
   text-align: left;
   width: 800px;
   color: #ccc;
+}
+
+.main{
+  background-image: url(./components/img/1.png);
+  height: 100vh;
+  background-size: cover ;
+  margin-left: 10%;
+  background-repeat: no-repeat;
+}
+
+.options{
+  background-image: url(./components/img/2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 80vh;
+  margin-left: 0%;
+  padding-top: 10%;
+}
+
+.cardHead{
+  margin:auto; 
+}
+
+.flex-card{
+  width: 100px;
+  margin: 20px;
+}
+
+.padding {
+  margin-left: 16%;
+  margin-right: 16%;
+}
+
+.brand{
+  height: 80px;
+}
+
+.backwhite{
+  background-color: white;
+  color: black;
+}
+
+.compImage{
+  height: 100px
 }

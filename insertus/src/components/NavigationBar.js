@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import brand from "./img/incertus_logooo.png";
 
 import firebase from "firebase/compat/app";
 
@@ -11,7 +12,7 @@ function NavigationBar({ user }) {
   return (
     <Navbar className="dark navbar" variant="dark" expand="lg">
       <Navbar.Brand href="/">
-        <h3>INCERTUS</h3>
+        <img className="brand" src={brand} alt="" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

@@ -56,7 +56,9 @@ function Aptitude() {
   return (
     <div>
       <h1 className="white margin">Aptitude</h1>
-      <CardList topics={topicsData} />
+      <div className="padding">
+        <CardList topics={topicsData} />
+      </div>
     </div>
   );
 }
