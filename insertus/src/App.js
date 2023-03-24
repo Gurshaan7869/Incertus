@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Container } from "react-bootstrap";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "./App.css";
@@ -17,7 +16,7 @@ import CsSubjects from "./components/Learning/CsSubjects";
 import PopLang from "./components/Learning/PopLang";
 import PopSkills from "./components/Learning/PopSkills";
 import DataStructures from "./components/Learning/DataStructures";
-import back from "./components/img/1.png";
+import Predict from "./components/Predict";
 
 firebase.initializeApp({
   apiKey: "AIzaSyCvDmFRroQnsobcztxPpCFA8MZUz13d_ac",
@@ -50,6 +49,7 @@ function App() {
           <Route path="/learning/popularlanguages" element={<PopLang />} />
           <Route path="/learning/popularskills" element={<PopSkills />} />
 
+          <Route path="/predict" element={<Predict />} />
           <Route path="/prevquestions" element={<PrevQuestions />} />
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/register" element={<Register setUser={setUser} />} />

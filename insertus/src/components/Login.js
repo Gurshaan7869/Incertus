@@ -26,7 +26,7 @@ function Login({ setUser }) {
   return (
     <div className="height-align">
       <h1>Login</h1>
-      <div className="login-form-container">
+      <div className="login-form-container px400">
         <Form onSubmit={handleSubmit}>
           {error && (
             <Alert variant="danger">EMAIL OR PASSWORD IS INCORRECT</Alert>

@@ -14,13 +14,13 @@ background-color: black;
 
 /* Styles for login form container */
 .height-align{
-  margin-top: 10%;
+  margin-top: 2%;
   color: white;
   padding-bottom: 5%;
 }
 
 .login-form-container {
-  width: 400px;
+  
   margin: 0 auto;
   padding: 20px;
   background-color: #333;
@@ -30,7 +30,9 @@ background-color: black;
 
 /* Styles for form input fields */
 .login-form-container input[type=email], 
-.login-form-container input[type=password] {
+.login-form-container input[type=password],
+.login-form-container input[type=number] ,
+.login-form-container input[type=text]{
   width: 100%;
   padding: 20px;
   margin: 20px 0;
@@ -279,4 +281,12 @@ margin: 2%;
 
 .compImage{
   height: 100px
+}
+
+.px400{
+  width: 400px;
+}
+
+.px600{
+  width: 600px;
 }
