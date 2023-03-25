@@ -1,6 +1,6 @@
 [
-{"name":"C", "img":"c_logo.png","link":"https://www.w3schools.com/c/"},
-{"name":"C++", "img":"cpp_icon.png","link":"https://www.w3schools.com/cpp/"},
-{"name":"Java", "img":"java_icon.png","link":"https://www.w3schools.com/java/"},
-{"name":"Python", "img":"python_icon.png","link":"https://www.w3schools.com/python/"}
+{"name":"C", "img":"c_logo.png", "course": "https://in.coursera.org/specializations/c-programming","notes": "https://www.geeksforgeeks.org/c-language-introduction/"},
+{"name":"C++", "img":"cpp_icon.png", "course": "https://in.coursera.org/specializations/hands-on-cpp","notes": "https://www.geeksforgeeks.org/c-plus-plus/"},
+{"name":"Java", "img":"java_icon.png", "course": "https://in.coursera.org/learn/java-introduction","notes": "https://www.geeksforgeeks.org/java/"},
+{"name":"Python", "img":"python_icon.png", "course": "https://in.coursera.org/specializations/python-3-programming","notes": "https://www.geeksforgeeks.org/python-programming-language/learn-python-tutorial/"}
 ]

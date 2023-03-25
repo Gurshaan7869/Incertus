@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import topics from "../data/aptitude.json";
 
 const Card = ({ topic }) => {
@@ -22,11 +23,19 @@ const Card = ({ topic }) => {
         alt={topic.name}
       />
       {showWebsite && (
-        <iframe
-          title={topic.name}
-          src={topic.link}
-          style={{ width: "100%", height: "650px", border: "none" }}
-        />
+        <div>
+          <iframe
+            title={topic.name}
+            src={topic.link}
+            style={{ width: "100%", height: "650px", border: "none" }}
+          />
+          <h5 className="margin">
+            Frame not loading? Go to original site instead...
+          </h5>
+          <Link to={topic.link}>
+            <button className="button">GO TO SITE</button>
+          </Link>
+        </div>
       )}
     </div>
   );
@@ -55,7 +64,7 @@ function Aptitude() {
   }, []);
   return (
     <div>
-      <h1 className="white margin">Aptitude</h1>
+      <h1 className="yell margin">Aptitude</h1>
       <div className="padding">
         <CardList topics={topicsData} />
       </div>

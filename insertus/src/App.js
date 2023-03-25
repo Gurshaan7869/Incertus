@@ -7,7 +7,6 @@ import NavigationBar from "./components/NavigationBar";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Contact from "./components/Contact";
 import PrevQuestions from "./components/PrevQuestions";
 import Learning from "./components/Learning";
 import Footer from "./components/Footer";
@@ -17,6 +16,8 @@ import PopLang from "./components/Learning/PopLang";
 import PopSkills from "./components/Learning/PopSkills";
 import DataStructures from "./components/Learning/DataStructures";
 import Predict from "./components/Predict";
+import NotFound from "./components/NotFound";
+import PrivateRoute from "./components/PrivateRoute";
 
 firebase.initializeApp({
   apiKey: "AIzaSyCvDmFRroQnsobcztxPpCFA8MZUz13d_ac",
@@ -40,19 +41,43 @@ function App() {
 
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/learning" element={<Learning />} />
+          <PrivateRoute path="/learning" element={<Learning />} />
 
-          <Route path="/learning/aptitude" element={<Aptitude />} />
-          <Route path="/learning/cssubjects" element={<CsSubjects />} />
-          <Route path="/learning/datastructures" element={<DataStructures />} />
-          <Route path="/learning/popularlanguages" element={<PopLang />} />
-          <Route path="/learning/popularskills" element={<PopSkills />} />
+          <PrivateRoute
+            path="/learning/aptitude"
+            element={<Aptitude />}
+            user={user}
+          />
+          <PrivateRoute
+            path="/learning/cssubjects"
+            element={<CsSubjects />}
+            user={user}
+          />
+          <PrivateRoute
+            path="/learning/datastructures"
+            element={<DataStructures />}
+            user={user}
+          />
+          <PrivateRoute
+            path="/learning/popularlanguages"
+            element={<PopLang />}
+            user={user}
+          />
+          <PrivateRoute
+            path="/learning/popularskills"
+            element={<PopSkills />}
+            user={user}
+          />
 
-          <Route path="/predict" element={<Predict />} />
-          <Route path="/prevquestions" element={<PrevQuestions />} />
+          <PrivateRoute path="/predict" element={<Predict />} user={user} />
+          <PrivateRoute
+            path="/prevquestions"
+            element={<PrevQuestions />}
+            user={user}
+          />
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/register" element={<Register setUser={setUser} />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
       <Footer />

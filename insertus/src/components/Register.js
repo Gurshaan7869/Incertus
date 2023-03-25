@@ -30,8 +30,10 @@ function Register({ setUser }) {
 
   return (
     <div className="height-align">
-      <h1>Register</h1>
       <div className="login-form-container px400">
+        <h1 className="yell" style={{ margin: "20px" }}>
+          REGISTER
+        </h1>
         <Form onSubmit={handleSubmit}>
           {error && <Alert variant="danger">EMAIL ALREADY EXISTS</Alert>}
           <Form.Group controlId="email">

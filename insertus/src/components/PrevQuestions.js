@@ -3,11 +3,11 @@ import topics from "./data/data1.json";
 
 const Card = ({ topic }) => {
   const [showWebsite, setShowWebsite] = useState(false);
-  const [cardWidth, setCardWidth] = useState(400);
+  const [cardWidth, setCardWidth] = useState(600);
 
   const toggleWebsite = () => {
     setShowWebsite(!showWebsite);
-    setCardWidth(showWebsite ? 400 : 2000);
+    setCardWidth(showWebsite ? 600 : 2000);
   };
   return (
     <div
@@ -60,7 +60,10 @@ function Aptitude() {
   }, []);
   return (
     <div>
-      <h1 className="white margin">Company Specific Questions</h1>
+      <h1 className="yell margin">COMPANY SPECIFIC QUESTIONS</h1>
+      <h3 className="white margin">
+        Find your favorite company's latest interview questions.
+      </h3>
       <div className="padding">
         <CardList topics={topicsData} />
       </div>

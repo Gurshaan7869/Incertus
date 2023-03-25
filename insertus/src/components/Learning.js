@@ -45,7 +45,10 @@ function Learning() {
 
   return (
     <div>
-      <h1 className="white margin">Learning Material</h1>
+      <h1 className="yell margin">LEARNING RESOURCES</h1>
+      <h3 className="white margin">
+        Make yourself placement ready with our curated learning resources.
+      </h3>
       <div className="padding">
         <CardList topics={topicsData} />
       </div>

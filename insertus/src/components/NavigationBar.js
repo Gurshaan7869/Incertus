@@ -20,7 +20,6 @@ function NavigationBar({ user }) {
           <Nav.Link href="/prevquestions">Company</Nav.Link>
           <Nav.Link href="/learning">Learning</Nav.Link>
           <Nav.Link href="/predict">Prediction</Nav.Link>
-          <Nav.Link href="/contact">Contact</Nav.Link>
         </Nav>
         <Nav className="ms-auto">
           {user ? (

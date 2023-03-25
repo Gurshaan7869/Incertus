@@ -35,11 +35,20 @@ background-color: black;
 .login-form-container input[type=text]{
   width: 100%;
   padding: 20px;
-  margin: 20px 0;
+  margin: 10px 0;
   border: none;
   border-radius: 5px;
   background-color: #444;
-  color: #fff;
+  color: white;
+}
+
+.login-form-container select{
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+  margin: 10px 0;
 }
 
 /* Styles for login button */
@@ -129,7 +138,8 @@ background-color: black;
 }
 
 .technical{
-  color: #24c7d6;
+  color: #f25b5c;
+  padding-top: 5%;
 }
 
 .logo{
@@ -171,7 +181,7 @@ margin: 2%;
   color: white;
   width: 400px;
   height: auto;
-  padding: 10px;
+  padding: 50px;
   position: relative;
   border-radius: 5px;
   text-decoration: none;
@@ -207,6 +217,7 @@ margin: 2%;
   margin-left: 50%;
   margin-top: 1%;
   color: #181d31;
+  
   background-color: #b8a867;
 }
 
@@ -222,7 +233,7 @@ margin: 2%;
 .welcome {
   text-align: left;
   height: 100%;
-  padding-top: 20%;
+  padding-top: 10%;
 }
 
 .name{
@@ -233,7 +244,7 @@ margin: 2%;
 }
 
 .des{
-  margin-top: 5%;
+  margin-top: 2%;
   text-align: left;
   width: 800px;
   color: #ccc;
@@ -243,7 +254,7 @@ margin: 2%;
   background-image: url(./components/img/1.png);
   height: 100vh;
   background-size: cover ;
-  margin-left: 10%;
+  margin-left: 5%;
   background-repeat: no-repeat;
 }
 
@@ -253,11 +264,13 @@ margin: 2%;
   background-repeat: no-repeat;
   height: 80vh;
   margin-left: 0%;
-  padding-top: 10%;
+  padding-top: 6%;
 }
 
 .cardHead{
   margin:auto; 
+  text-decoration: none;
+  color: black;
 }
 
 .flex-card{
@@ -266,8 +279,7 @@ margin: 2%;
 }
 
 .padding {
-  margin-left: 16%;
-  margin-right: 16%;
+  padding: 0 16%;
 }
 
 .brand{
@@ -284,9 +296,111 @@ margin: 2%;
 }
 
 .px400{
-  width: 400px;
+  width: 500px;
 }
 
 .px600{
   width: 600px;
+}
+
+.link{
+  text-decoration: none;
+}
+
+.homeCard:hover {
+background-color: #0097b2;
+}
+
+.notFound{
+  color: white;
+  margin: 5%;
+}
+
+.errcode{
+  font-size: 70px;
+  color: #f8bd48;
+}
+
+.ques{
+  margin: 5%;
+  font-size: 100px;
+}
+
+.taunt{
+  color: #555;
+  margin: 5%;
+  font-size: 50px;
+}
+
+.popicon{
+  width: 30px;
+  margin: auto 10%;
+}
+
+.margin-top{
+  margin-top: 50px;
+  
+}
+
+.heightimage{
+  height: 200px;
+}
+
+.middle{
+  margin-top: 5%;
+  text-decoration: none;
+}
+
+.nodeco{
+  text-decoration: none;
+  color: #06698a;
+}
+
+.grey{
+  color: #ccc;
+}
+
+.yell{
+  color: #f8bd48;
+}
+
+.button{
+  background-color: #181d31;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.redilearning{
+  margin-top: 20px;
+  color: #f8bd48;
+  background-color: #181d31;
+  border: 1px solid #f8bd48;
+  
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+.redilearning:hover{
+  background-color: #f8bd48;
+  color: #181d31;
+}
+
+.chances{
+  margin-top: 2%;
+}
+
+.poplang{background-color: #62d998;}
+
+.nano{
+  border: 1px solid #0d6efd;
+  color: #181d31;
+  border-radius: 10px;
+margin: 2%;
+}
+.nano:hover{
+  background-color: #0d6efd;
+  color: white;
 }

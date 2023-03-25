@@ -1,48 +1,39 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import topics from "../data/popularLanguages.json";
+import notes from "../img/notes_icon.png";
+import video from "../img/video_icon.png";
 
-const Card = ({ topic, color }) => {
-  const [showWebsite, setShowWebsite] = useState(false);
-  const [cardWidth, setCardWidth] = useState(400);
-
-  const toggleWebsite = () => {
-    setShowWebsite(!showWebsite);
-    setCardWidth(showWebsite ? 400 : 2000);
-  };
+const Card = ({ topic }) => {
   return (
-    <div
-      className="AptiCard learningCard yellow"
-      style={{ width: cardWidth }}
-      onClick={toggleWebsite}
-    >
+    <div className="AptiCard learningCard poplang">
       <h2>{topic.name}</h2>
-      <img
-        className="learningImage"
-        src={require("../img/" + topic.img)}
-        alt={topic.name}
-      />
-      {showWebsite && (
-        <iframe
-          title={topic.name}
-          src={topic.link}
-          style={{ width: "100%", height: "650px", border: "none" }}
-        />
-      )}
+      <div>
+        <div className="popImg">
+          <img
+            className="heightimage"
+            src={require("../img/" + topic.img)}
+            alt={topic.name}
+          />
+        </div>
+        <Link to={topic.course} className="flex margin-top nodeco nano">
+          <img className="popicon" src={video} alt="" />
+          <p className="middle">Nano Degree Certification</p>
+        </Link>
+        <Link to={topic.notes} className="flex nodeco nano">
+          <img className="popicon" src={notes} alt="" />
+          <p className="middle">Read Notes</p>
+        </Link>
+      </div>
     </div>
   );
 };
 
 const CardList = ({ topics }) => {
-  const colors = ["red", "blue", "green", "yellow", "purple"];
-
   return (
     <div className="card-list">
-      {topics.map((topic, index) => (
-        <Card
-          key={topic.name}
-          topic={topic}
-          color={colors[index % colors.length]}
-        />
+      {topics.map((topic) => (
+        <Card key={topic.name} topic={topic} />
       ))}
     </div>
   );
@@ -55,7 +46,7 @@ function PopLang() {
   }, []);
   return (
     <div>
-      <h1 className="white margin">Popular Languages</h1>
+      <h1 className="yell margin">Popular Languages</h1>
       <div className="padding">
         <CardList topics={topicsData} />
       </div>

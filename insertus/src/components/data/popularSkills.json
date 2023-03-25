@@ -1,8 +1,8 @@
 [
-{"name":"Data Science","img":"datasci_icon.png","nanoDegree":"","link":"https://www.w3schools.com/datascience/"},
-{"name":"Machine Learning","img":"ml_icon.png","link":"https://www.w3schools.com/ai/default.asp"},
-{"name":"Cyber Security","img":"cyber_icon.png","link":"https://www.w3schools.com/cybersecurity/"},
-{"name":"Power BI","img":"powerbi_icon.png","link":""},
-{"name":"Cloud Computing","img":"cloud_icon.png","link":"https://www.w3schools.com/aws/aws_cloudessentials_cloudcomputing.php"},
-{"name":"Ethical Hacking","img":"eth_icon.png","link":"https://www.w3schools.com/cybersecurity/cybersecurity_crime.php"}
+{"name":"Data Science","img":"datasci_icon.png","nanoDegree":"","link":"https://www.javatpoint.com/data-science"},
+{"name":"Machine Learning","img":"ml_icon.png","link":"https://www.tutorialspoint.com/machine_learning/index.htm"},
+{"name":"Cyber Security","img":"cyber_icon.png","link":"https://www.tutorialspoint.com/what-is-cybersecurity-everything-you-need-to-know"},
+{"name":"Power BI","img":"powerbi_icon.png","link":"https://www.tutorialspoint.com/power_bi/index.htm"},
+{"name":"Cloud Computing","img":"cloud_icon.png","link":"https://www.tutorialspoint.com/cloud_computing/index.htm"},
+{"name":"Ethical Hacking","img":"eth_icon.png","link":"https://www.tutorialspoint.com/ethical_hacking/index.htm"}
 ]
