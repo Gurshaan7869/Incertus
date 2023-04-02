@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "./App.css";
@@ -17,7 +22,6 @@ import PopSkills from "./components/Learning/PopSkills";
 import DataStructures from "./components/Learning/DataStructures";
 import Predict from "./components/Predict";
 import NotFound from "./components/NotFound";
-import PrivateRoute from "./components/PrivateRoute";
 
 firebase.initializeApp({
   apiKey: "AIzaSyCvDmFRroQnsobcztxPpCFA8MZUz13d_ac",
@@ -27,12 +31,22 @@ firebase.initializeApp({
 
 function App() {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       setUser(user);
+      setLoading(false);
     });
   }, []);
+
+  if (loading) {
+    return (
+      <div>
+        <h1 className="yell loading">Loading...</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="App">
@@ -41,39 +55,39 @@ function App() {
 
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <PrivateRoute path="/learning" element={<Learning />} />
+          <Route
+            path="/learning"
+            element={user ? <Learning /> : <Navigate to="/login" />}
+          />
 
-          <PrivateRoute
+          <Route
             path="/learning/aptitude"
-            element={<Aptitude />}
-            user={user}
+            element={user ? <Aptitude /> : <Navigate to="/login" />}
           />
-          <PrivateRoute
+          <Route
             path="/learning/cssubjects"
-            element={<CsSubjects />}
-            user={user}
+            element={user ? <CsSubjects /> : <Navigate to="/login" />}
           />
-          <PrivateRoute
+          <Route
             path="/learning/datastructures"
-            element={<DataStructures />}
-            user={user}
+            element={user ? <DataStructures /> : <Navigate to="/login" />}
           />
-          <PrivateRoute
+          <Route
             path="/learning/popularlanguages"
-            element={<PopLang />}
-            user={user}
+            element={user ? <PopLang /> : <Navigate to="/login" />}
           />
-          <PrivateRoute
+          <Route
             path="/learning/popularskills"
-            element={<PopSkills />}
-            user={user}
+            element={user ? <PopSkills /> : <Navigate to="/login" />}
           />
 
-          <PrivateRoute path="/predict" element={<Predict />} user={user} />
-          <PrivateRoute
+          <Route
+            path="/predict"
+            element={user ? <Predict /> : <Navigate to="/login" />}
+          />
+          <Route
             path="/prevquestions"
-            element={<PrevQuestions />}
-            user={user}
+            element={user ? <PrevQuestions /> : <Navigate to="/login" />}
           />
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/register" element={<Register setUser={setUser} />} />

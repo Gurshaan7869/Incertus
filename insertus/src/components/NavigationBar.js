@@ -3,10 +3,13 @@ import { Navbar, Nav } from "react-bootstrap";
 import brand from "./img/incertus_logooo.png";
 
 import firebase from "firebase/compat/app";
+import { useNavigate } from "react-router-dom";
 
 function NavigationBar({ user }) {
+  const navigate = useNavigate();
   const handleLogout = () => {
     firebase.auth().signOut();
+    navigate("/");
   };
 
   return (

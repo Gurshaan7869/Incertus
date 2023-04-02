@@ -154,6 +154,14 @@ background-color: black;
   background-color: #181d31;
 }
 
+.nav-link{
+  margin: 10px;
+}
+
+.navbar-text{
+  margin: 10px;
+}
+
 .white{
   color: white;
 }
@@ -400,7 +408,14 @@ background-color: #0097b2;
   border-radius: 10px;
 margin: 2%;
 }
+
 .nano:hover{
   background-color: #0d6efd;
   color: white;
+}
+
+.loading{
+  margin: 20%;
+  margin-left: 35%;
+  font-size: 150px;
 }
