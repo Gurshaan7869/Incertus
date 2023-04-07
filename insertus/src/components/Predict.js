@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 var response;
+var result;
 
 function Predict() {
   const [showRes, setShowRes] = useState(false);
@@ -14,8 +15,16 @@ function Predict() {
 
     try {
       response = await axios.post("http://127.0.0.1:5000/predict", data);
-      console.log(response.data.Placed);
       setShowRes(response.data.Placed);
+      if (response.data.Placed <= 40) {
+        result = "WORK HARDER";
+      } else if (response.data.Placed <= 70) {
+        result = "APPLY FOR REGULAR COMPANIES";
+      } else if (response.data.Placed <= 90) {
+        result = "APPLY FOR DREAM COMPANIES";
+      } else {
+        result = "APPLY FOR SUPER DREAM COMPANIES";
+      }
     } catch (error) {
       console.error(error);
     }
@@ -41,6 +50,8 @@ function Predict() {
             <label htmlFor="age"></label>
             <input
               type="number"
+              min="18"
+              max="35"
               placeholder="Age"
               name="Age"
               id="age"
@@ -51,6 +62,9 @@ function Predict() {
             <label htmlFor="hsc-p"></label>
             <input
               type="number"
+              step="0.1"
+              min="0"
+              max="100"
               placeholder="10th marks"
               name="HSC_P"
               id="hsc-p"
@@ -61,6 +75,9 @@ function Predict() {
             <label htmlFor="ssc-p"></label>
             <input
               type="number"
+              step="0.1"
+              min="0"
+              max="100"
               placeholder="12th marks"
               name="SSC_P"
               id="ssc-p"
@@ -86,6 +103,9 @@ function Predict() {
             <label htmlFor="cgpa"></label>
             <input
               type="number"
+              step="0.01"
+              min="0"
+              max="10"
               placeholder="College GPA"
               name="CGPA"
               id="cgpa"
@@ -96,6 +116,8 @@ function Predict() {
             <label htmlFor="internships"></label>
             <input
               type="number"
+              min="0"
+              max="10"
               placeholder="Number of Internships"
               name="Internships"
               id="internships"
@@ -106,6 +128,8 @@ function Predict() {
             <label htmlFor="backlogs"></label>
             <input
               type="number"
+              min="0"
+              max="10"
               placeholder="Number Of Backlogs"
               name="HistoryOfBacklogs"
               id="backlogs"
@@ -118,7 +142,8 @@ function Predict() {
         </form>
         {showRes && (
           <div>
-            <h3>Your placement chances are : {response.data.Placed}%</h3>
+            <h3>Your placement chances are : {response.data.Placed}% </h3>
+            <h3>{result} </h3>
           </div>
         )}
       </div>

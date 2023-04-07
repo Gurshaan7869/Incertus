@@ -3,11 +3,11 @@ import topics from "./data/data1.json";
 
 const Card = ({ topic }) => {
   const [showWebsite, setShowWebsite] = useState(false);
-  const [cardWidth, setCardWidth] = useState(600);
+  const [cardWidth, setCardWidth] = useState(500);
 
   const toggleWebsite = () => {
     setShowWebsite(!showWebsite);
-    setCardWidth(showWebsite ? 600 : 2000);
+    setCardWidth(showWebsite ? 500 : 1600);
   };
   return (
     <div
@@ -59,7 +59,7 @@ function Aptitude() {
     setTopicsData(topics);
   }, []);
   return (
-    <div>
+    <div style={{ alignItems: "center", display: "grid" }}>
       <h1 className="yell margin">COMPANY SPECIFIC QUESTIONS</h1>
       <h3 className="white margin">
         Find your favorite company's latest interview questions.

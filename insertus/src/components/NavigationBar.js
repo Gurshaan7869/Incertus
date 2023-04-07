@@ -27,7 +27,10 @@ function NavigationBar({ user }) {
         <Nav className="ms-auto">
           {user ? (
             <>
-              <Navbar.Text className="mr-3">{user.email}</Navbar.Text>
+              <Nav className="mr-3">
+                {user && <Nav.Link href="/profile">{user.email}</Nav.Link>}
+              </Nav>
+              {/* <Navbar.Text className="mr-3">{user.email}</Navbar.Text> */}
               <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
             </>
           ) : (

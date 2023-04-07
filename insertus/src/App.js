@@ -22,6 +22,7 @@ import PopSkills from "./components/Learning/PopSkills";
 import DataStructures from "./components/Learning/DataStructures";
 import Predict from "./components/Predict";
 import NotFound from "./components/NotFound";
+import Profile from "./components/Profile";
 
 firebase.initializeApp({
   apiKey: "AIzaSyCvDmFRroQnsobcztxPpCFA8MZUz13d_ac",
@@ -91,6 +92,10 @@ function App() {
           />
           <Route path="/login" element={<Login setUser={setUser} />} />
           <Route path="/register" element={<Register setUser={setUser} />} />
+          <Route
+            path="/profile"
+            element={user ? <Profile user={user} /> : <Navigate to="/login" />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
